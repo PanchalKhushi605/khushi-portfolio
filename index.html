@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Khushi Panchal · UI/UX & Graphic Designer</title>
+  <meta name="description" content="Portfolio of Khushi Panchal, a UI/UX and graphic designer creating clean, intuitive and visually engaging digital experiences.">
+  <meta name="theme-color" content="#F2ECE7">
+  <meta property="og:title" content="Khushi Panchal · UI/UX & Graphic Designer">
+  <meta property="og:description" content="Clean, intuitive and visually engaging designs: UI/UX, branding and graphic design.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/khushi.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Jost:wght@300;400;500;600&family=Playfair+Display:wght@800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Hand-drawn doodle library (reused across sections) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="p-star" d="M0 -50 L12 -12 L50 0 L12 12 L0 50 L-12 12 L-50 0 L-12 -12Z"/>
+    <path id="p-petal" d="M50 50 C36 38 36 12 50 8 C64 12 64 38 50 50Z"/>
+    <path id="p-loop" d="M0 0 C-20 -40 -18 -108 0 -120 C18 -108 20 -40 0 0Z"/>
+    <path id="p-heart" d="M50 90 C28 72 8 56 8 34 C8 18 20 8 33 8 C42 8 48 14 50 22 C53 12 60 6 70 6 C84 6 94 18 92 34 C90 56 70 72 50 90Z"/>
+  </defs>
+  <symbol id="blob" viewBox="0 0 300 300">
+    <path fill="currentColor" d="M0 0 H292 C278 40 240 60 192 56 C140 52 98 28 60 44 C26 58 24 98 48 128 C74 160 92 192 78 228 C64 264 34 286 0 294 Z"/>
+  </symbol>
+  <symbol id="stars" viewBox="0 0 200 160">
+    <g fill="currentColor">
+      <use href="#p-star" transform="translate(58 42) rotate(18) scale(.5)"/>
+      <use href="#p-star" transform="translate(160 52) rotate(-12) scale(.46)"/>
+      <use href="#p-star" transform="translate(110 108) rotate(14) scale(.9)"/>
+    </g>
+  </symbol>
+  <symbol id="heart" viewBox="0 0 100 100">
+    <use href="#p-heart" fill="currentColor"/>
+  </symbol>
+  <symbol id="heart-sketch" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <use href="#p-heart" stroke-width="4"/>
+      <path stroke-width="2.4" d="M28 22 L40 66 M56 18 L50 70 M72 22 L64 56 M20 34 L30 58"/>
+    </g>
+  </symbol>
+  <symbol id="burst" viewBox="0 0 120 110">
+    <g fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round">
+      <path d="M17.9 79.7 L15.1 95.5 L90.4 100.7Z"/>
+      <path d="M50 28.6 L38.6 40 L97.3 87.3Z"/>
+      <path d="M105.5 5.1 L89.7 7.9 L110.7 80.4Z"/>
+    </g>
+  </symbol>
+  <symbol id="smiley" viewBox="0 0 120 120">
+    <g fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round">
+      <path d="M62 8 C94 8 114 32 112 62 C110 94 84 114 56 112 C26 110 6 86 8 58 C10 30 30 10 66 10"/>
+      <path d="M48 30 L42 62 M74 28 L68 60"/>
+      <path d="M28 72 C40 94 80 96 94 72 M24 68 L33 76"/>
+    </g>
+  </symbol>
+  <symbol id="flower" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round">
+      <use href="#p-petal"/>
+      <use href="#p-petal" transform="translate(50 50) rotate(62) scale(.86) translate(-50 -50)"/>
+      <use href="#p-petal" transform="translate(50 50) rotate(122) scale(.95) translate(-50 -50)"/>
+      <use href="#p-petal" transform="translate(50 50) rotate(178) scale(.8) translate(-50 -50)"/>
+      <use href="#p-petal" transform="translate(50 50) rotate(238) scale(.92) translate(-50 -50)"/>
+      <use href="#p-petal" transform="translate(50 50) rotate(298) scale(.84) translate(-50 -50)"/>
+      <path stroke-width="2" stroke-linecap="round" d="M50 44 L50 22 M56 50 L74 38 M44 52 L28 62"/>
+    </g>
+  </symbol>
+  <symbol id="flower-fill" viewBox="0 0 100 100">
+    <g fill="currentColor">
+      <use href="#p-petal"/>
+      <use href="#p-petal" transform="translate(50 50) rotate(58) scale(.8) translate(-50 -50)"/>
+      <use href="#p-petal" transform="translate(50 50) rotate(118) scale(.95) translate(-50 -50)"/>
+      <use href="#p-petal" transform="translate(50 50) rotate(182) scale(.78) translate(-50 -50)"/>
+      <use href="#p-petal" transform="translate(50 50) rotate(240) scale(.9) translate(-50 -50)"/>
+      <use href="#p-petal" transform="translate(50 50) rotate(300) scale(.82) translate(-50 -50)"/>
+    </g>
+    <path fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" d="M50 42 L50 20 M57 47 L72 36 M56 56 L70 68 M44 56 L32 66 M43 47 L28 38"/>
+  </symbol>
+  <symbol id="dots" viewBox="0 0 300 200">
+    <g fill="currentColor">
+      <ellipse cx="20" cy="30" rx="9" ry="7" transform="rotate(20 20 30)"/><ellipse cx="62" cy="14" rx="7" ry="6"/>
+      <ellipse cx="96" cy="42" rx="10" ry="8" transform="rotate(30 96 42)"/><ellipse cx="142" cy="20" rx="8" ry="7"/>
+      <ellipse cx="182" cy="46" rx="11" ry="9" transform="rotate(15 182 46)"/><ellipse cx="226" cy="24" rx="8" ry="6" transform="rotate(-20 226 24)"/>
+      <ellipse cx="272" cy="52" rx="9" ry="8"/><ellipse cx="36" cy="82" rx="10" ry="8" transform="rotate(-15 36 82)"/>
+      <ellipse cx="82" cy="98" rx="8" ry="7" transform="rotate(25 82 98)"/><ellipse cx="126" cy="76" rx="11" ry="9"/>
+      <ellipse cx="170" cy="102" rx="8" ry="7" transform="rotate(-30 170 102)"/><ellipse cx="216" cy="80" rx="10" ry="9" transform="rotate(20 216 80)"/>
+      <ellipse cx="262" cy="108" rx="8" ry="6"/><ellipse cx="20" cy="136" rx="8" ry="7" transform="rotate(10 20 136)"/>
+      <ellipse cx="66" cy="152" rx="11" ry="9"/><ellipse cx="112" cy="130" rx="9" ry="7" transform="rotate(35 112 130)"/>
+      <ellipse cx="156" cy="160" rx="10" ry="8" transform="rotate(-10 156 160)"/><ellipse cx="202" cy="140" rx="8" ry="7"/>
+      <ellipse cx="246" cy="166" rx="11" ry="9" transform="rotate(-25 246 166)"/><ellipse cx="42" cy="186" rx="7" ry="6"/>
+      <ellipse cx="132" cy="190" rx="8" ry="6" transform="rotate(20 132 190)"/><ellipse cx="286" cy="150" rx="7" ry="6"/>
+    </g>
+  </symbol>
+  <symbol id="loops" viewBox="0 0 170 170">
+    <g fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round">
+      <use href="#p-loop" transform="translate(40 160) rotate(-28) scale(1.05)"/>
+      <use href="#p-loop" transform="translate(40 160) rotate(8) scale(.9)"/>
+      <use href="#p-loop" transform="translate(40 160) rotate(44) scale(1.1)"/>
+    </g>
+  </symbol>
+  <symbol id="scribble" viewBox="0 0 200 175">
+    <path fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M22 42 C62 12 132 2 152 16 C174 32 62 70 42 82 C22 94 122 60 162 76 C202 92 102 122 72 127 C42 132 122 122 152 148 C160 156 168 164 176 170"/>
+  </symbol>
+  <symbol id="curly-arrow" viewBox="0 0 220 120">
+    <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 112 C30 62 70 42 96 46 C126 52 120 96 96 96 C70 96 78 46 116 40 C150 35 172 55 206 40"/>
+      <path d="M188 28 L207 40 L192 56"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#home" aria-label="Khushi, back to top">Khushi<svg class="nav__heart" aria-hidden="true"><use href="#heart"/></svg></a>
+  <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+  <nav class="nav__menu" id="menu" aria-label="Main">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#work">Work</a>
+    <a class="nav__cta" href="#contact">Let's talk</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- 1 · Hero -->
+  <section class="section hero bg-cream" id="home">
+    <svg class="doodle blob blob--tl" aria-hidden="true"><use href="#blob"/></svg>
+    <svg class="doodle blob blob--br" aria-hidden="true"><use href="#blob"/></svg>
+    <svg class="doodle float hero__stars" aria-hidden="true"><use href="#stars"/></svg>
+    <svg class="doodle float-slow hero__heart" aria-hidden="true"><use href="#heart"/></svg>
+    <svg class="doodle hero__arrow" aria-hidden="true"><use href="#curly-arrow"/></svg>
+    <svg class="doodle hero__burst" aria-hidden="true"><use href="#burst"/></svg>
+
+    <div class="container hero__grid">
+      <div class="hero__text reveal">
+        <h1 class="serif hero__title">Graphic<br>Design</h1>
+        <p class="brush brush--pale hero__tag">Portfolio</p>
+        <p class="hero__by">by <strong>Khushi Panchal</strong> · UI/UX &amp; Graphic Designer</p>
+        <div class="hero__actions">
+          <a class="btn btn--dark" href="#work">See my work</a>
+          <a class="btn btn--line" href="#contact">Say hello</a>
+        </div>
+      </div>
+
+      <div class="laptop reveal" aria-label="A few of my projects">
+        <div class="laptop__screen">
+          <div class="slides">
+            <img class="slide is-active" src="assets/img/brochure.jpg" alt="Graphic design portfolio brochure">
+            <img class="slide" src="assets/img/visiting-card.jpg" alt="Visiting card design">
+            <img class="slide slide--contain" style="--bg:#fff" src="assets/img/travel-card.jpg" alt="Ayodhya Dham travel booking card UI">
+            <img class="slide" style="object-position:50% 30%" src="assets/img/banner.jpg" alt="Web banner design on a building mockup">
+            <img class="slide slide--contain" style="--bg:#EA8280" src="assets/img/bicycle.jpg" alt="Illustration of a girl riding a bicycle">
+          </div>
+        </div>
+        <div class="laptop__base"><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · About -->
+  <section class="section about bg-ice" id="about">
+    <svg class="doodle smiley about__smiley--l" aria-hidden="true"><use href="#smiley"/></svg>
+    <svg class="doodle smiley about__smiley--r" aria-hidden="true"><use href="#smiley"/></svg>
+    <svg class="doodle float about__heart1" aria-hidden="true"><use href="#heart-sketch"/></svg>
+    <svg class="doodle float-slow about__heart2" aria-hidden="true"><use href="#heart-sketch"/></svg>
+    <svg class="doodle about__loops" aria-hidden="true"><use href="#loops"/></svg>
+    <svg class="doodle about__dashes" aria-hidden="true"><use href="#loops"/></svg>
+
+    <div class="container about__inner">
+      <div class="photo reveal">
+        <img src="assets/img/khushi.jpg" alt="Portrait of Khushi Panchal" width="720" height="720">
+        <svg class="photo__flower" aria-hidden="true"><use href="#flower"/></svg>
+        <svg class="photo__flower2" aria-hidden="true"><use href="#flower-fill"/></svg>
+      </div>
+      <h2 class="serif about__hi reveal">Hi there!</h2>
+      <p class="hand about__name reveal">I am Khushi</p>
+      <p class="about__bio reveal">A UI/UX designer passionate about creating clean, intuitive, and visually engaging digital experiences. I enjoy turning ideas and user needs into thoughtful designs that are simple, functional, and enjoyable to use.</p>
+    </div>
+  </section>
+
+  <!-- 3 · Services -->
+  <section class="section services bg-blush" id="services">
+    <svg class="doodle services__flower" aria-hidden="true"><use href="#flower-fill"/></svg>
+    <svg class="doodle services__dots--tr" aria-hidden="true"><use href="#dots"/></svg>
+    <svg class="doodle services__dots--bl" aria-hidden="true"><use href="#dots"/></svg>
+    <svg class="doodle float services__stars" aria-hidden="true"><use href="#stars"/></svg>
+
+    <div class="container">
+      <div class="title-wrap reveal">
+        <svg class="title-burst" aria-hidden="true"><use href="#burst"/></svg>
+        <h2 class="serif section-title">Services I do</h2>
+      </div>
+      <div class="services__grid">
+        <article class="service reveal">
+          <h3 class="brush hand">UX/UI Design</h3>
+          <p>I create clean, modern and user-friendly digital interfaces with a focus on intuitive experiences and strong visual design.</p>
+        </article>
+        <article class="service reveal">
+          <h3 class="brush hand">Design Tools</h3>
+          <ul class="tools">
+            <li>Figma</li>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Photoshop</li>
+          </ul>
+        </article>
+        <article class="service reveal">
+          <h3 class="brush hand">Graphic Design</h3>
+          <p>I create visually engaging designs with attention to composition, typography, colour and brand aesthetics.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · Process -->
+  <section class="section process bg-cream" id="process">
+    <svg class="doodle blob process__blob--tr" aria-hidden="true"><use href="#blob"/></svg>
+    <svg class="doodle blob process__blob--bl" aria-hidden="true"><use href="#blob"/></svg>
+    <svg class="doodle process__arrow" aria-hidden="true"><use href="#curly-arrow"/></svg>
+    <svg class="doodle process__loops" aria-hidden="true"><use href="#loops"/></svg>
+
+    <div class="container">
+      <h2 class="serif section-title reveal">The Process</h2>
+      <ol class="steps">
+        <li class="step reveal">
+          <div class="step__circle">
+            <svg class="step__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+            <h3 class="hand">Discuss</h3>
+          </div>
+          <p>We understand your needs, ideas, goals and vision to set the right direction.</p>
+        </li>
+        <li class="next" aria-hidden="true">
+          <svg viewBox="0 0 90 70"><path d="M0 16 H54 V0 L88 35 L54 70 V54 H0Z"/><text x="30" y="41">NEXT</text></svg>
+        </li>
+        <li class="step reveal">
+          <div class="step__circle">
+            <svg class="step__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4.5" width="16" height="11" rx="1"/><rect x="5.6" y="6.1" width="12.8" height="7.8"/><path d="M2 18.2h20l-1.2 1.3H3.2Z"/><path d="M4 15.5 2 18.2M20 15.5l2 2.7"/></svg>
+            <h3 class="hand">Work</h3>
+          </div>
+          <p>I turn the ideas into thoughtful designs, focusing on creativity, functionality and detail.</p>
+        </li>
+        <li class="next" aria-hidden="true">
+          <svg viewBox="0 0 90 70"><path d="M0 16 H54 V0 L88 35 L54 70 V54 H0Z"/><text x="30" y="41">NEXT</text></svg>
+        </li>
+        <li class="step reveal">
+          <div class="step__circle">
+            <svg class="step__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg>
+            <h3 class="hand">Deliver</h3>
+          </div>
+          <p>I refine the final work and deliver a polished design that is ready to use.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5 · Mission -->
+  <section class="section mission bg-ice" id="mission">
+    <svg class="doodle smiley mission__smiley" aria-hidden="true"><use href="#smiley"/></svg>
+    <svg class="doodle mission__dots" aria-hidden="true"><use href="#dots"/></svg>
+
+    <div class="container">
+      <div class="frame reveal">
+        <svg class="frame__lines" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <path vector-effect="non-scaling-stroke" d="M120 40 C300 30 600 26 860 30 C930 32 960 60 968 140 C976 260 972 400 962 500 C956 552 930 572 870 574 C640 580 330 576 150 566 C80 562 50 530 44 460 C38 360 40 250 44 160 C48 90 70 46 120 40"/>
+            <path vector-effect="non-scaling-stroke" d="M112 72 C88 90 78 120 76 170 C72 260 72 360 78 450 C82 510 104 534 160 538 C330 546 640 548 868 544 C904 543 924 540 936 530"/>
+            <path vector-effect="non-scaling-stroke" d="M46 170 L77 176 M45 220 L75 224 M44 270 L74 272 M44 320 L74 320 M45 370 L75 368 M46 420 L76 416 M48 470 L79 462 M60 522 L90 506 M95 556 L118 536 M150 566 L160 538 M210 569 L214 541 M270 571 L272 542 M330 573 L331 543 M390 574 L390 544 M450 575 L450 545 M510 576 L510 546 M570 577 L570 546 M630 577 L630 546 M690 577 L690 546 M750 576 L750 545 M810 575 L810 545 M870 574 L866 544 M920 562 L908 541"/>
+          </g>
+        </svg>
+        <span class="frame__quote" aria-hidden="true">&ldquo;</span>
+        <svg class="frame__flower frame__flower--tl" aria-hidden="true"><use href="#flower"/></svg>
+        <svg class="frame__flower frame__flower--br" aria-hidden="true"><use href="#flower"/></svg>
+        <p class="brush brush--pale mission__label">My Mission</p>
+        <p class="hand mission__text">To provide quality designs for my clients</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · Work intro -->
+  <section class="section work-intro bg-blush" id="work">
+    <svg class="doodle blob blob--tl" aria-hidden="true"><use href="#blob"/></svg>
+    <svg class="doodle blob blob--br" aria-hidden="true"><use href="#blob"/></svg>
+    <svg class="doodle float work-intro__stars" aria-hidden="true"><use href="#stars"/></svg>
+    <svg class="doodle work-intro__scribble" aria-hidden="true"><use href="#scribble"/></svg>
+    <svg class="doodle work-intro__loops" aria-hidden="true"><use href="#loops"/></svg>
+    <svg class="doodle float work-intro__h1" aria-hidden="true"><use href="#heart-sketch"/></svg>
+    <svg class="doodle float-slow work-intro__h2" aria-hidden="true"><use href="#heart-sketch"/></svg>
+    <svg class="doodle float work-intro__h3" aria-hidden="true"><use href="#heart-sketch"/></svg>
+
+    <div class="container work-intro__inner reveal">
+      <h2 class="serif work-intro__title">My Work<br>Portfolio</h2>
+      <p class="work-intro__sub">UI/UX Design / Graphic Design / Illustration</p>
+    </div>
+  </section>
+
+  <!-- 7 · Graphic design -->
+  <section class="section gallery bg-cream" id="graphic-design">
+    <svg class="doodle gallery__dots" aria-hidden="true"><use href="#dots"/></svg>
+    <svg class="doodle gallery__flower" aria-hidden="true"><use href="#flower"/></svg>
+
+    <div class="container">
+      <div class="title-wrap reveal">
+        <svg class="title-burst title-burst--mustard" aria-hidden="true"><use href="#burst"/></svg>
+        <h2 class="serif section-title">Graphic Design</h2>
+      </div>
+      <div class="cards">
+        <article class="card card--blue reveal" tabindex="0" data-full="assets/img/brochure-full.jpg">
+          <div class="card__media"><img src="assets/img/brochure.jpg" alt="Graphic design portfolio brochure spreads" loading="lazy"></div>
+          <h3 class="card__label brush hand">Brochure Design</h3>
+          <p class="card__desc">A graphic design portfolio booklet: cover, contents and spreads for logo, branding and print work.</p>
+        </article>
+        <article class="card card--mustard reveal" tabindex="0" data-full="assets/img/banner.jpg">
+          <div class="card__media"><img src="assets/img/banner.jpg" alt="Web banner design shown on a building mockup" loading="lazy" style="object-position:50% 34%"></div>
+          <h3 class="card__label brush hand">Banner Design</h3>
+          <p class="card__desc">A bold web banner for a graphic design tutorial, presented on a high-rise building mockup.</p>
+        </article>
+        <article class="card card--rose reveal" tabindex="0" data-full="assets/img/visiting-card-full.jpg">
+          <div class="card__media"><img src="assets/img/visiting-card.jpg" alt="Front of a visiting card design" loading="lazy"></div>
+          <h3 class="card__label brush hand">Visiting Card</h3>
+          <p class="card__desc">A double-sided business card with a geometric layout, clear contact details and a QR code.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · UI/UX design -->
+  <section class="section gallery bg-cream" id="ui-ux">
+    <svg class="doodle gallery__flower-l" aria-hidden="true"><use href="#flower"/></svg>
+    <svg class="doodle gallery__flower-r" aria-hidden="true"><use href="#flower"/></svg>
+    <svg class="doodle gallery__loops" aria-hidden="true"><use href="#loops"/></svg>
+
+    <div class="container">
+      <div class="title-wrap reveal">
+        <h2 class="serif section-title">UI/UX design</h2>
+      </div>
+      <div class="cards cards--2">
+        <article class="card card--blue reveal" tabindex="0" data-full="assets/img/travel-card.jpg">
+          <div class="card__media"><img src="assets/img/travel-card.jpg" alt="Ayodhya Dham travel booking card interface" loading="lazy" style="object-position:50% 22%"></div>
+          <h3 class="card__label brush hand">Travel Booking Card</h3>
+          <p class="card__desc">“Ayodhya Dham” tour card with location tags, trip details, amenity icons, booking progress and a clear call to action.</p>
+        </article>
+        <article class="card card--mustard reveal" tabindex="0" data-full="assets/img/sidebar-showcase.jpg">
+          <div class="card__media"><img src="assets/img/sidebar-showcase.jpg" alt="Dark dashboard sidebar navigation with a highlighted active item" loading="lazy"></div>
+          <h3 class="card__label brush hand">Sidebar Navigation</h3>
+          <p class="card__desc">A collapsible sidebar for a web dashboard, with line icons, a highlighted active state and a profile avatar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · Illustration -->
+  <section class="section gallery bg-cream" id="illustration">
+    <svg class="doodle gallery__burst" aria-hidden="true"><use href="#burst"/></svg>
+    <svg class="doodle gallery__flower-r2" aria-hidden="true"><use href="#flower"/></svg>
+
+    <div class="container">
+      <div class="title-wrap reveal">
+        <h2 class="serif section-title">Illustration</h2>
+      </div>
+      <div class="cards cards--2">
+        <article class="card card--rose reveal" tabindex="0" data-full="assets/img/bicycle.jpg">
+          <div class="card__media" style="--media-bg:#EA8280"><img src="assets/img/bicycle.jpg" alt="Flat illustration of a girl riding a bicycle through the hills" loading="lazy" style="object-position:50% 62%"></div>
+          <h3 class="card__label brush hand">Scene Illustration</h3>
+          <p class="card__desc">A warm flat-vector scene of a girl cycling through rolling hills, trees and a pastel sky.</p>
+        </article>
+        <article class="card card--blue reveal" tabindex="0" data-full="assets/img/avatar.png">
+          <div class="card__media card__media--contain" style="--media-bg:#F3DCD8"><img src="assets/img/avatar.png" alt="Flat character avatar of a girl with a hair bun" loading="lazy"></div>
+          <h3 class="card__label brush hand">Character Avatar</h3>
+          <p class="card__desc">A friendly flat character portrait with soft pinks and clean outlines.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · Contact -->
+  <section class="section contact bg-peach" id="contact">
+    <svg class="doodle contact__flower-tl" aria-hidden="true"><use href="#flower-fill"/></svg>
+    <svg class="doodle contact__scribble-tr" aria-hidden="true"><use href="#loops"/></svg>
+    <svg class="doodle contact__scribble-l" aria-hidden="true"><use href="#scribble"/></svg>
+
+    <div class="container">
+      <div class="dashed reveal">
+        <svg class="dashed__border" aria-hidden="true"><rect width="100%" height="100%"/></svg>
+        <svg class="contact__flower-br" aria-hidden="true"><use href="#flower-fill"/></svg>
+        <h2 class="serif contact__title">I hope to<br>work with you!</h2>
+        <p class="hand contact__follow">Follow my socials</p>
+        <ul class="contact__list">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg><a href="https://www.instagram.com/khuh_shiee/" target="_blank" rel="noopener">@khuh_shiee</a></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 6 9 7 9-7"/></svg><a href="mailto:panchalkhushi605@gmail.com">panchalkhushi605@gmail.com</a></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.6v.1M11.5 16v-5.5M11.5 13c0-1.6 1-2.6 2.3-2.6s2.2.9 2.2 2.6V16"/></svg><a href="https://www.linkedin.com/in/khushi-panchal-523787350/" target="_blank" rel="noopener">LinkedIn · Khushi Panchal</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© <span id="year">2026</span> Khushi Panchal · Designed with <svg class="footer__heart" aria-hidden="true"><use href="#heart"/></svg></p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden>
+  <button class="lightbox__close" type="button" aria-label="Close">×</button>
+  <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous project">‹</button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__img" src="" alt="">
+    <figcaption><strong class="hand" id="lb-title"></strong><span id="lb-desc"></span></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next project">›</button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
