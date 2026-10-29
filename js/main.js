@@ -51,6 +51,10 @@
   const cards = [...document.querySelectorAll('.card')];
   const box = document.getElementById('lightbox');
   const img = box.querySelector('.lightbox__img');
+  const frame = box.querySelector('.lightbox__frame');
+  img.addEventListener('load', () => {
+    box.classList.toggle('is-tall', img.naturalHeight > img.naturalWidth * 2);
+  });
   const title = document.getElementById('lb-title');
   const desc = document.getElementById('lb-desc');
   let index = 0;
@@ -60,6 +64,8 @@
     index = (i + cards.length) % cards.length;
     const card = cards[index];
     const thumb = card.querySelector('img');
+    box.classList.remove('is-tall');
+    frame.scrollTop = 0;
     img.src = card.dataset.full || thumb.src;
     img.alt = thumb.alt;
     title.textContent = card.querySelector('.card__label').textContent;
