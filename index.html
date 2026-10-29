@@ -152,7 +152,9 @@
       <div class="laptop reveal" aria-label="A few of my projects">
         <div class="laptop__screen">
           <div class="slides">
-            <img class="slide is-active" src="assets/img/brochure.jpg" alt="Graphic design portfolio brochure">
+            <img class="slide is-active" src="assets/img/coffee.jpg" alt="The Coffee Movement website homepage">
+            <img class="slide" style="object-position:50% 0" src="assets/img/pet.jpg" alt="Wagora pet store website hero">
+            <img class="slide" src="assets/img/brochure.jpg" alt="Graphic design portfolio brochure">
             <img class="slide" src="assets/img/vcard.jpg" alt="Visiting card design">
             <img class="slide slide--contain" style="--bg:#fff" src="assets/img/travel.jpg" alt="Ayodhya Dham travel booking card UI">
             <img class="slide" style="object-position:50% 30%" src="assets/img/banner.jpg" alt="Web banner design on a building mockup">
@@ -295,7 +297,32 @@
 
     <div class="container work-intro__inner reveal">
       <h2 class="serif work-intro__title">My Work<br>Portfolio</h2>
-      <p class="work-intro__sub">UI/UX Design / Graphic Design / Illustration</p>
+      <p class="work-intro__sub">Web Design / UI/UX Design / Graphic Design / Illustration</p>
+    </div>
+  </section>
+
+  <!-- 7 · Web design (from Figma) -->
+  <section class="section gallery bg-cream" id="web-design">
+    <svg class="doodle gallery__dots" aria-hidden="true"><use href="#dots"/></svg>
+    <svg class="doodle gallery__flower" aria-hidden="true"><use href="#flower"/></svg>
+
+    <div class="container">
+      <div class="title-wrap reveal">
+        <svg class="title-burst" aria-hidden="true"><use href="#burst"/></svg>
+        <h2 class="serif section-title">Web Design</h2>
+      </div>
+      <div class="cards cards--2">
+        <article class="card card--rose reveal" tabindex="0" data-full="assets/img/full/pet.jpg">
+          <div class="card__media"><img src="assets/img/pet.jpg" alt="Wagora pet store website hero with a pet collage" loading="lazy" style="object-position:50% 0"></div>
+          <h3 class="card__label brush hand">Pet Store Website</h3>
+          <p class="card__desc">A full landing page for “Wagora”, a pet boutique: hero, pet categories, best sellers, how it works, reviews and footer.</p>
+        </article>
+        <article class="card card--blue reveal" tabindex="0" data-full="assets/img/full/coffee.jpg">
+          <div class="card__media"><img src="assets/img/coffee.jpg" alt="The Coffee Movement café website homepage" loading="lazy" style="object-position:50% 0"></div>
+          <h3 class="card__label brush hand">Café Website</h3>
+          <p class="card__desc">Homepage for “The Coffee Movement”: clean navigation, a script headline over the café photo and store locations.</p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -339,16 +366,21 @@
       <div class="title-wrap reveal">
         <h2 class="serif section-title">UI/UX design</h2>
       </div>
-      <div class="cards cards--2">
+      <div class="cards">
         <article class="card card--blue reveal" tabindex="0" data-full="assets/img/travel.jpg">
           <div class="card__media"><img src="assets/img/travel.jpg" alt="Ayodhya Dham travel booking card interface" loading="lazy" style="object-position:50% 22%"></div>
-          <h3 class="card__label brush hand">Travel Booking Card</h3>
+          <h3 class="card__label brush hand">Travel Card UI</h3>
           <p class="card__desc">“Ayodhya Dham” tour card with location tags, trip details, amenity icons, booking progress and a clear call to action.</p>
         </article>
         <article class="card card--mustard reveal" tabindex="0" data-full="assets/img/sidebar.jpg">
           <div class="card__media"><img src="assets/img/sidebar.jpg" alt="Dark dashboard sidebar navigation with a highlighted active item" loading="lazy"></div>
           <h3 class="card__label brush hand">Sidebar Navigation</h3>
           <p class="card__desc">A collapsible sidebar for a web dashboard, with line icons, a highlighted active state and a profile avatar.</p>
+        </article>
+        <article class="card card--rose reveal" tabindex="0" data-full="assets/img/crypto.png">
+          <div class="card__media card__media--contain" style="--media-bg:#EDEDED"><img src="assets/img/crypto.png" alt="Crypto price widget with Buy and Sell toggle" loading="lazy"></div>
+          <h3 class="card__label brush hand">Crypto Widget</h3>
+          <p class="card__desc">A Buy/Sell price card for Bitcoin, BNB and Ethereum with coin icons, gain/loss colours and a clear Buy now button.</p>
         </article>
       </div>
     </div>
@@ -409,7 +441,7 @@
   <button class="lightbox__close" type="button" aria-label="Close">×</button>
   <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous project">‹</button>
   <figure class="lightbox__figure">
-    <img class="lightbox__img" src="" alt="">
+    <div class="lightbox__frame"><img class="lightbox__img" src="" alt=""></div>
     <figcaption><strong class="hand" id="lb-title"></strong><span id="lb-desc"></span></figcaption>
   </figure>
   <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next project">›</button>
