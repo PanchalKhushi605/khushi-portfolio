@@ -9,13 +9,20 @@
   <meta property="og:title" content="Khushi Panchal · UI/UX & Graphic Designer">
   <meta property="og:description" content="Clean, intuitive and visually engaging designs: UI/UX, branding and graphic design.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/img/khushi.jpg">
+  <meta property="og:url" content="https://khushi-portfolio-pied-delta.vercel.app/">
+  <meta property="og:image" content="https://khushi-portfolio-pied-delta.vercel.app/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Jost:wght@300;400;500;600&family=Playfair+Display:wght@800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    document.documentElement.classList.add('js');
+    try { if (sessionStorage.getItem('kp-intro')) document.documentElement.classList.add('intro-seen'); } catch (e) {}
+  </script>
 </head>
 <body>
 
@@ -115,6 +122,15 @@
   </symbol>
 </svg>
 
+<div class="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <svg class="loader__heart" viewBox="0 0 100 100"><use href="#p-heart"/></svg>
+    <span class="loader__name">Khushi</span>
+  </div>
+</div>
+<div class="progress" aria-hidden="true"><span></span></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__ring"><span class="cursor__label">View</span></span></div>
+
 <header class="nav" id="nav">
   <a class="nav__logo" href="#home" aria-label="Khushi, back to top">Khushi<svg class="nav__heart" aria-hidden="true"><use href="#heart"/></svg></a>
   <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
@@ -133,19 +149,20 @@
   <section class="section hero bg-cream" id="home">
     <svg class="doodle blob blob--tl" aria-hidden="true"><use href="#blob"/></svg>
     <svg class="doodle blob blob--br" aria-hidden="true"><use href="#blob"/></svg>
-    <svg class="doodle float hero__stars" aria-hidden="true"><use href="#stars"/></svg>
-    <svg class="doodle float-slow hero__heart" aria-hidden="true"><use href="#heart"/></svg>
-    <svg class="doodle hero__arrow" aria-hidden="true"><use href="#curly-arrow"/></svg>
-    <svg class="doodle hero__burst" aria-hidden="true"><use href="#burst"/></svg>
+    <svg class="doodle float hero__stars" data-depth="-40" aria-hidden="true"><use href="#stars"/></svg>
+    <svg class="doodle float-slow hero__heart" data-depth="34" aria-hidden="true"><use href="#heart"/></svg>
+    <svg class="doodle hero__arrow" data-depth="22" aria-hidden="true"><use href="#curly-arrow"/></svg>
+    <svg class="doodle hero__burst" data-depth="-26" aria-hidden="true"><use href="#burst"/></svg>
 
     <div class="container hero__grid">
       <div class="hero__text reveal">
+        <p class="badge"><span class="badge__dot"></span>Open to design roles</p>
         <h1 class="serif hero__title">Graphic<br>Design</h1>
         <p class="brush brush--pale hero__tag">Portfolio</p>
-        <p class="hero__by">by <strong>Khushi Panchal</strong> · UI/UX &amp; Graphic Designer</p>
+        <p class="hero__by">I'm <strong>Khushi Panchal</strong> and I design <span class="rotator" aria-hidden="true" data-words='["websites", "app interfaces", "brand visuals", "illustrations"]'>websites</span><span class="caret" aria-hidden="true"></span><span class="sr-only">websites, app interfaces, brand visuals and illustrations</span></p>
         <div class="hero__actions">
-          <a class="btn btn--dark" href="#work">See my work</a>
-          <a class="btn btn--line" href="#contact">Say hello</a>
+          <a class="btn btn--dark magnetic" href="#work">See my work</a>
+          <a class="btn btn--line magnetic" href="#contact">Say hello</a>
         </div>
       </div>
 
@@ -162,9 +179,36 @@
           </div>
         </div>
         <div class="laptop__base"><span></span></div>
+        <div class="slides__dots" role="group" aria-label="Choose a project to preview"></div>
       </div>
     </div>
+    <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
   </section>
+
+  <!-- Skills ticker -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__band marquee__band--blue">
+      <div class="marquee__track marquee__track--rev">
+        <span>Figma</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+        <span>Photoshop</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+        <span>Illustrator</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+        <span>Typography</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+        <span>Layout</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+        <span>Colour</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+        <span>Prototyping</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+      </div>
+    </div>
+    <div class="marquee__band marquee__band--rose">
+      <div class="marquee__track">
+        <span>UI/UX Design</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+        <span>Web Design</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+        <span>Graphic Design</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+        <span>Branding</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+        <span>Illustration</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+        <span>Print Design</span><svg class="marquee__star" viewBox="-50 -50 100 100"><use href="#p-star"/></svg>
+      </div>
+    </div>
+  </div>
 
   <!-- 2 · About -->
   <section class="section about bg-ice" id="about">
@@ -184,6 +228,11 @@
       <h2 class="serif about__hi reveal">Hi there!</h2>
       <p class="hand about__name reveal">I am Khushi</p>
       <p class="about__bio reveal">A UI/UX designer passionate about creating clean, intuitive, and visually engaging digital experiences. I enjoy turning ideas and user needs into thoughtful designs that are simple, functional, and enjoyable to use.</p>
+      <ul class="stats reveal">
+        <li><b data-count="10">10</b><span>featured projects</span></li>
+        <li><b data-count="4">4</b><span>design disciplines</span></li>
+        <li><b data-count="3">3</b><span>pro design tools</span></li>
+      </ul>
     </div>
   </section>
 
@@ -279,7 +328,7 @@
         <svg class="frame__flower frame__flower--tl" aria-hidden="true"><use href="#flower"/></svg>
         <svg class="frame__flower frame__flower--br" aria-hidden="true"><use href="#flower"/></svg>
         <p class="brush brush--pale mission__label">My Mission</p>
-        <p class="hand mission__text">To provide quality designs for my clients</p>
+        <p class="hand mission__text">To provide <span class="hl">quality designs<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 8 C 40 3, 80 11, 120 6 S 180 4, 197 7"/></svg></span> for my clients</p>
       </div>
     </div>
   </section>
@@ -298,11 +347,18 @@
     <div class="container work-intro__inner reveal">
       <h2 class="serif work-intro__title">My Work<br>Portfolio</h2>
       <p class="work-intro__sub">Web Design / UI/UX Design / Graphic Design / Illustration</p>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+        <button class="chip" type="button" data-filter="web" aria-pressed="false">Web Design</button>
+        <button class="chip" type="button" data-filter="uiux" aria-pressed="false">UI/UX</button>
+        <button class="chip" type="button" data-filter="graphic" aria-pressed="false">Graphic Design</button>
+        <button class="chip" type="button" data-filter="illustration" aria-pressed="false">Illustration</button>
+      </div>
     </div>
   </section>
 
   <!-- 7 · Web design (from Figma) -->
-  <section class="section gallery bg-cream" id="web-design">
+  <section class="section gallery bg-cream" id="web-design" data-cat="web">
     <svg class="doodle gallery__dots" aria-hidden="true"><use href="#dots"/></svg>
     <svg class="doodle gallery__flower" aria-hidden="true"><use href="#flower"/></svg>
 
@@ -312,12 +368,12 @@
         <h2 class="serif section-title">Web Design</h2>
       </div>
       <div class="cards cards--2">
-        <article class="card card--rose reveal" tabindex="0" data-full="assets/img/full/pet.jpg">
+        <article class="card card--rose reveal" tabindex="0" data-full="assets/img/full/pet.jpg" data-tools="Figma">
           <div class="card__media"><img src="assets/img/pet.jpg" alt="Wagora pet store website hero with a pet collage" loading="lazy" style="object-position:50% 0"></div>
           <h3 class="card__label brush hand">Pet Store Website</h3>
           <p class="card__desc">A full landing page for “Wagora”, a pet boutique: hero, pet categories, best sellers, how it works, reviews and footer.</p>
         </article>
-        <article class="card card--blue reveal" tabindex="0" data-full="assets/img/full/coffee.jpg">
+        <article class="card card--blue reveal" tabindex="0" data-full="assets/img/full/coffee.jpg" data-tools="Figma">
           <div class="card__media"><img src="assets/img/coffee.jpg" alt="The Coffee Movement café website homepage" loading="lazy" style="object-position:50% 0"></div>
           <h3 class="card__label brush hand">Café Website</h3>
           <p class="card__desc">Homepage for “The Coffee Movement”: clean navigation, a script headline over the café photo and store locations.</p>
@@ -327,7 +383,7 @@
   </section>
 
   <!-- 7 · Graphic design -->
-  <section class="section gallery bg-cream" id="graphic-design">
+  <section class="section gallery bg-cream" id="graphic-design" data-cat="graphic">
     <svg class="doodle gallery__dots" aria-hidden="true"><use href="#dots"/></svg>
     <svg class="doodle gallery__flower" aria-hidden="true"><use href="#flower"/></svg>
 
@@ -337,17 +393,17 @@
         <h2 class="serif section-title">Graphic Design</h2>
       </div>
       <div class="cards">
-        <article class="card card--blue reveal" tabindex="0" data-full="assets/img/full/brochure.jpg">
+        <article class="card card--blue reveal" tabindex="0" data-full="assets/img/full/brochure.jpg" data-tools="Photoshop">
           <div class="card__media"><img src="assets/img/brochure.jpg" alt="Graphic design portfolio brochure spreads" loading="lazy"></div>
           <h3 class="card__label brush hand">Brochure Design</h3>
           <p class="card__desc">A graphic design portfolio booklet: cover, contents and spreads for logo, branding and print work.</p>
         </article>
-        <article class="card card--mustard reveal" tabindex="0" data-full="assets/img/banner.jpg">
+        <article class="card card--mustard reveal" tabindex="0" data-full="assets/img/banner.jpg" data-tools="Photoshop">
           <div class="card__media"><img src="assets/img/banner.jpg" alt="Web banner design shown on a building mockup" loading="lazy" style="object-position:50% 34%"></div>
           <h3 class="card__label brush hand">Banner Design</h3>
           <p class="card__desc">A bold web banner for a graphic design tutorial, presented on a high-rise building mockup.</p>
         </article>
-        <article class="card card--rose reveal" tabindex="0" data-full="assets/img/full/vcard.jpg">
+        <article class="card card--rose reveal" tabindex="0" data-full="assets/img/full/vcard.jpg" data-tools="Photoshop">
           <div class="card__media"><img src="assets/img/vcard.jpg" alt="Front of a visiting card design" loading="lazy"></div>
           <h3 class="card__label brush hand">Visiting Card</h3>
           <p class="card__desc">A double-sided business card with a geometric layout, clear contact details and a QR code.</p>
@@ -357,7 +413,7 @@
   </section>
 
   <!-- 8 · UI/UX design -->
-  <section class="section gallery bg-cream" id="ui-ux">
+  <section class="section gallery bg-cream" id="ui-ux" data-cat="uiux">
     <svg class="doodle gallery__flower-l" aria-hidden="true"><use href="#flower"/></svg>
     <svg class="doodle gallery__flower-r" aria-hidden="true"><use href="#flower"/></svg>
     <svg class="doodle gallery__loops" aria-hidden="true"><use href="#loops"/></svg>
@@ -367,17 +423,17 @@
         <h2 class="serif section-title">UI/UX design</h2>
       </div>
       <div class="cards">
-        <article class="card card--blue reveal" tabindex="0" data-full="assets/img/travel.jpg">
+        <article class="card card--blue reveal" tabindex="0" data-full="assets/img/travel.jpg" data-tools="Figma">
           <div class="card__media"><img src="assets/img/travel.jpg" alt="Ayodhya Dham travel booking card interface" loading="lazy" style="object-position:50% 22%"></div>
           <h3 class="card__label brush hand">Travel Card UI</h3>
           <p class="card__desc">“Ayodhya Dham” tour card with location tags, trip details, amenity icons, booking progress and a clear call to action.</p>
         </article>
-        <article class="card card--mustard reveal" tabindex="0" data-full="assets/img/sidebar.jpg">
+        <article class="card card--mustard reveal" tabindex="0" data-full="assets/img/sidebar.jpg" data-tools="Figma">
           <div class="card__media"><img src="assets/img/sidebar.jpg" alt="Dark dashboard sidebar navigation with a highlighted active item" loading="lazy"></div>
           <h3 class="card__label brush hand">Sidebar Navigation</h3>
           <p class="card__desc">A collapsible sidebar for a web dashboard, with line icons, a highlighted active state and a profile avatar.</p>
         </article>
-        <article class="card card--rose reveal" tabindex="0" data-full="assets/img/crypto.png">
+        <article class="card card--rose reveal" tabindex="0" data-full="assets/img/crypto.png" data-tools="Figma">
           <div class="card__media card__media--contain" style="--media-bg:#EDEDED"><img src="assets/img/crypto.png" alt="Crypto price widget with Buy and Sell toggle" loading="lazy"></div>
           <h3 class="card__label brush hand">Crypto Widget</h3>
           <p class="card__desc">A Buy/Sell price card for Bitcoin, BNB and Ethereum with coin icons, gain/loss colours and a clear Buy now button.</p>
@@ -387,7 +443,7 @@
   </section>
 
   <!-- 9 · Illustration -->
-  <section class="section gallery bg-cream" id="illustration">
+  <section class="section gallery bg-cream" id="illustration" data-cat="illustration">
     <svg class="doodle gallery__burst" aria-hidden="true"><use href="#burst"/></svg>
     <svg class="doodle gallery__flower-r2" aria-hidden="true"><use href="#flower"/></svg>
 
@@ -396,12 +452,12 @@
         <h2 class="serif section-title">Illustration</h2>
       </div>
       <div class="cards cards--2">
-        <article class="card card--rose reveal" tabindex="0" data-full="assets/img/bicycle.jpg">
+        <article class="card card--rose reveal" tabindex="0" data-full="assets/img/bicycle.jpg" data-tools="Figma">
           <div class="card__media" style="--media-bg:#EA8280"><img src="assets/img/bicycle.jpg" alt="Flat illustration of a girl riding a bicycle through the hills" loading="lazy" style="object-position:50% 62%"></div>
           <h3 class="card__label brush hand">Scene Illustration</h3>
           <p class="card__desc">A warm flat-vector scene of a girl cycling through rolling hills, trees and a pastel sky.</p>
         </article>
-        <article class="card card--blue reveal" tabindex="0" data-full="assets/img/avatar.png">
+        <article class="card card--blue reveal" tabindex="0" data-full="assets/img/avatar.png" data-tools="Figma">
           <div class="card__media card__media--contain" style="--media-bg:#F3DCD8"><img src="assets/img/avatar.png" alt="Flat character avatar of a girl with a hair bun" loading="lazy"></div>
           <h3 class="card__label brush hand">Character Avatar</h3>
           <p class="card__desc">A friendly flat character portrait with soft pinks and clean outlines.</p>
@@ -427,6 +483,10 @@
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 6 9 7 9-7"/></svg><a href="mailto:panchalkhushi605@gmail.com">panchalkhushi605@gmail.com</a></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 7.6v.1M11.5 16v-5.5M11.5 13c0-1.6 1-2.6 2.3-2.6s2.2.9 2.2 2.6V16"/></svg><a href="https://www.linkedin.com/in/khushi-panchal-523787350/" target="_blank" rel="noopener">LinkedIn · Khushi Panchal</a></li>
         </ul>
+        <div class="contact__actions">
+          <a class="btn btn--dark magnetic" href="mailto:panchalkhushi605@gmail.com?subject=Hello%20Khushi">Email me</a>
+          <button class="btn btn--line magnetic" type="button" data-copy="panchalkhushi605@gmail.com">Copy email</button>
+        </div>
       </div>
     </div>
   </section>
@@ -442,10 +502,16 @@
   <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous project">‹</button>
   <figure class="lightbox__figure">
     <div class="lightbox__frame"><img class="lightbox__img" src="" alt=""></div>
-    <figcaption><strong class="hand" id="lb-title"></strong><span id="lb-desc"></span></figcaption>
+    <figcaption><strong class="hand" id="lb-title"></strong><span id="lb-desc"></span><span class="lightbox__meta" id="lb-meta"></span></figcaption>
   </figure>
   <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next project">›</button>
 </div>
+
+<button class="to-top" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 44 44" aria-hidden="true"><circle class="to-top__track" cx="22" cy="22" r="20"/><circle class="to-top__bar" cx="22" cy="22" r="20"/></svg>
+  <span aria-hidden="true">↑</span>
+</button>
+<div class="toast" role="status" aria-live="polite"></div>
 
 <script src="js/main.js"></script>
 </body>
