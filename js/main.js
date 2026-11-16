@@ -85,6 +85,8 @@
 
   /* ---- Project cards: "View project" hint ---- */
   const cards = $$('.card');
+  // Everything that opens in the viewer: project cards plus Illustrator gallery tiles
+  const items = $$('.card, .art');
   cards.forEach((card) => {
     $('.card__media', card).insertAdjacentHTML('beforeend',
       '<span class="card__view" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>View project</span>');
@@ -285,7 +287,7 @@
     };
     follow();
     document.addEventListener('pointerover', (e) => {
-      const onCard = !!e.target.closest('.card');
+      const onCard = !!e.target.closest('.card, .art');
       cursor.classList.toggle('is-view', onCard);
       cursor.classList.toggle('is-link', !onCard && !!e.target.closest('a, button, .chip, .tools li'));
     });
@@ -342,7 +344,7 @@
   chips.forEach((chip) => {
     const f = chip.dataset.filter;
     const count = galleries.filter((g) => f === 'all' || g.dataset.cat === f)
-      .reduce((sum, g) => sum + $$('.card', g).length, 0);
+      .reduce((sum, g) => sum + $$('.card, .art', g).length, 0);
     chip.insertAdjacentHTML('beforeend', `<sup>${count}</sup>`);
     chip.addEventListener('click', () => {
       chips.forEach((c) => {
@@ -378,9 +380,9 @@
   let index = 0;
   let lastFocus = null;
   img.addEventListener('load', () => {
-    box.classList.toggle('is-tall', img.naturalHeight > img.naturalWidth * 2);
+    box.classList.toggle('is-tall', img.naturalHeight > img.naturalWidth * 3);
   });
-  const visibleCards = () => cards.filter((c) => !c.closest('.gallery').hidden);
+  const visibleCards = () => items.filter((c) => !c.closest('.gallery').hidden);
   const show = (i) => {
     const list = visibleCards();
     index = (i + list.length) % list.length;
@@ -390,8 +392,8 @@
     frame.scrollTop = 0;
     img.src = card.dataset.full || thumb.src;
     img.alt = thumb.alt;
-    lbTitle.textContent = $('.card__label', card).textContent;
-    lbDesc.textContent = $('.card__desc', card).textContent;
+    lbTitle.textContent = $('.card__label, .art__title', card).textContent;
+    lbDesc.textContent = $('.card__desc, .art__desc', card).textContent;
     const category = $('.section-title', card.closest('.gallery')).textContent.trim();
     lbMeta.innerHTML = '';
     [category, card.dataset.tools].filter(Boolean).forEach((t) => {
@@ -412,9 +414,9 @@
     document.body.style.overflow = '';
     if (lastFocus) lastFocus.focus();
   };
-  cards.forEach((card) => {
+  items.forEach((card) => {
     card.setAttribute('role', 'button');
-    card.setAttribute('aria-label', `View ${$('.card__label', card).textContent}`);
+    card.setAttribute('aria-label', `View ${$('.card__label, .art__title', card).textContent}`);
     card.addEventListener('click', () => open(card));
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(card); }
