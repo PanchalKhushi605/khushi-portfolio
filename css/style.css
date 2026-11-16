@@ -770,6 +770,78 @@ button { font: inherit; color: inherit; }
   .to-top { right: 14px; bottom: 14px; width: 46px; height: 46px; }
 }
 
+/* =========================================================
+   Adobe Illustrator gallery
+   ========================================================= */
+.gallery.art-gallery { padding-top: clamp(84px, 10vw, 150px); }
+.art-gallery__intro {
+  max-width: 52ch; margin: calc(-1 * clamp(18px, 3vw, 44px)) auto clamp(36px, 5vw, 64px);
+  text-align: center; font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+}
+.art-gallery__stars { color: var(--mustard); width: clamp(84px, 9vw, 170px); height: clamp(68px, 7.2vw, 136px); top: 5%; right: 6%; }
+.art-gallery__flower { color: var(--rose); width: clamp(56px, 6vw, 110px); height: clamp(56px, 6vw, 110px); bottom: 6%; left: 3%; --r: -14deg; }
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: clamp(270px, 25vw, 380px);
+  grid-auto-flow: dense;
+  gap: clamp(16px, 2.2vw, 30px);
+}
+.art {
+  position: relative;
+  display: flex; flex-direction: column;
+  min-width: 0;
+  border-radius: clamp(20px, 2vw, 30px);
+  background: #fff;
+  overflow: hidden;
+  cursor: zoom-in;
+  box-shadow: 0 1px 0 rgba(11, 11, 11, .04), 0 18px 40px -28px rgba(171, 94, 88, .5);
+  transition: translate .45s cubic-bezier(.2, .7, .2, 1), box-shadow .45s;
+}
+.art--feature { grid-column: span 2; grid-row: span 2; }
+.art--wide { grid-column: span 2; }
+.art__media {
+  flex: 1; min-height: 0;
+  padding: clamp(14px, 2vw, 30px);
+  background: var(--art-bg, #fff);
+  overflow: hidden;
+}
+.art__media img {
+  width: 100%; height: 100%; object-fit: contain;
+  transition: transform .7s cubic-bezier(.2, .7, .2, 1);
+}
+.art__caption {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 14px clamp(16px, 1.8vw, 24px) 16px;
+  border-top: 1px solid rgba(11, 11, 11, .06);
+  background: #fff;
+}
+.art__kind { display: block; font: 500 .76rem var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--rose-dark); }
+.art__title { margin-top: 2px; font-size: clamp(1.35rem, 1.9vw, 1.85rem); line-height: 1.1; }
+.art__desc { display: none; }
+.art__plus {
+  flex: none; width: 40px; height: 40px;
+  display: grid; place-items: center;
+  border: 2px solid var(--ink); border-radius: 50%;
+  transition: transform .45s cubic-bezier(.2, .7, .2, 1), background .3s, color .3s;
+}
+.art__plus svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+.art:hover, .art:focus-visible { translate: 0 -6px; box-shadow: 0 1px 0 rgba(11, 11, 11, .04), 0 32px 60px -30px rgba(171, 94, 88, .65); }
+.art:hover .art__media img, .art:focus-visible .art__media img { transform: scale(1.04); }
+.art:hover .art__plus, .art:focus-visible .art__plus { transform: rotate(90deg); background: var(--ink); color: #fff; }
+.art:focus-visible { outline-offset: 6px; }
+
+@media (max-width: 1024px) {
+  .art-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: clamp(240px, 36vw, 340px); }
+}
+@media (max-width: 600px) {
+  .art-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+  .art--feature, .art--wide { grid-column: auto; grid-row: auto; }
+  .art__media { flex: none; aspect-ratio: 4 / 3; }
+  .art--feature .art__media { aspect-ratio: 1 / 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
